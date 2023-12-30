@@ -1,16 +1,13 @@
+import { EventList } from "./EventList/EventList";
+import { Container } from "components/Container/Container";
+import { Title } from "components/Title/TItle";
+import events from "../upcoming-events.json";
+
 export const App = () => {
-  return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
-  );
+	return (
+		<Container>
+			<Title />
+			<EventList events={events} />
+		</Container>
+	);
 };
